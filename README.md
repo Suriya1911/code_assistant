@@ -7,32 +7,32 @@ An AI-powered legal assistant for Canadian criminal law, built with Streamlit, G
 - **Intelligent Search**: Semantic search through the entire Criminal Code of Canada
 - **AI-Powered Responses**: Context-aware answers using Google Gemini AI
 - **Source Citations**: Always shows relevant legal sections with full references
-- **Custom Context**: Upload your own legal documents for specialized searches
+- **Custom Context**: Upload legal documents for specialized searches
 - **Chat History**: Track previous questions and responses
 - **Downloadable Reports**: Export questions, answers, and sources
 - **Professional UI**: Clean, responsive interface with legal disclaimers
 
 ## 🚀 Quick Start
 
-### 1. Install Dependencies
+### 1. Installing Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Set Up Environment
+### 2. Environment Set Up
 Create a `.env` file in the root directory:
 ```bash
 GOOGLE_API_KEY=your_gemini_api_key_here
 ```
 
-### 3. Prepare Your Data
-Ensure you have the Criminal Code PDF:
+### 3. Data Preparation
+Criminal Code PDF From (https://laws-lois.justice.gc.ca/eng/acts/C-46/page-1.html):
 ```
 data/
 └── C-46.pdf  # Canadian Criminal Code PDF
 ```
 
-### 4. Run the Setup Pipeline
+### 4. Setup Pipeline
 
 #### Step 1: Extract Sections from PDF
 ```bash
@@ -61,15 +61,15 @@ streamlit run app.py
 
 ```
 .
-├── app.py                  # Main Streamlit application
+├── app.py                 # Main Streamlit application
 ├── pdf_scraper.py         # PDF extraction and processing
 ├── build_index.py         # FAISS index creation
 ├── requirements.txt       # Python dependencies
-├── .env                   # Environment variables (create this)
+├── .env                   # Environment variables (LLM API Key)
 ├── data/
 │   ├── C-46.pdf          # Criminal Code PDF (you provide)
 │   └── processed/
-│       └── sections.json  # Extracted sections (generated)
+│       └── sections.json # Extracted sections (generated)
 └── faiss_index/          # Vector search index (generated)
 ```
 
@@ -107,9 +107,9 @@ model = genai.GenerativeModel(model_name="models/gemini-1.5-pro-001")  # More po
    - Run `python pdf_scraper.py` to extract sections from PDF
 
 3. **"GOOGLE_API_KEY not found"**
-   - Add your Gemini API key to the `.env` file
+   - Add Gemini API key to the `.env` file
 
-4. **Memory issues during indexing**
+4. **Memory issues during indexing (Optional)**
    - Reduce batch size in `build_index.py`
    - Use a smaller embedding model
 
