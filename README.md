@@ -14,7 +14,7 @@ An AI-powered legal assistant for Canadian criminal law, built with Streamlit, G
 
 ## 🚀 Quick Start
 
-### 1. Installing Dependencies
+### 1. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
@@ -61,11 +61,11 @@ streamlit run app.py
 
 ```
 .
-├── app.py                 # Main Streamlit application
-├── pdf_scraper.py         # PDF extraction and processing
-├── build_index.py         # FAISS index creation
-├── requirements.txt       # Python dependencies
-├── .env                   # Environment variables (LLM API Key)
+├── app.py                # Main Streamlit application
+├── pdf_scraper.py        # PDF extraction and processing
+├── build_index.py        # FAISS index creation
+├── requirements.txt      # Python dependencies
+├── .env                  # Environment variables (LLM API Key)
 ├── data/
 │   ├── C-46.pdf          # Criminal Code PDF (you provide)
 │   └── processed/
