@@ -17,3 +17,5 @@ sentence-transformers>=2.2.0
 # Utility Libraries
 numpy>=1.24.0
 pandas>=2.0.0
+
+plotly
